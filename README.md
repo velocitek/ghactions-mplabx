@@ -24,6 +24,23 @@ None.
 
 ## Example usage
 
-uses: velocitek/ghactions-mplabx
-with:
-project: firmware.X
+Add the following `.github/workflows/build.yml` file to your project:
+
+```yaml
+name: Build
+on: [push]
+
+jobs:
+  build:
+    name: Build project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download source
+        uses: actions/checkout@v1
+
+      - name: Build library
+        uses: velocitek/ghactions-mplabx@master
+        with:
+          project: firmware.X
+          configuration: default
+```
