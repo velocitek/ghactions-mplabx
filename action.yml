@@ -1,4 +1,9 @@
 name: "Build with MPLabX and XC16"
+description: "This action builds an MPLABX/xc16 project in a Linux container."
+branding:
+  icon: wind
+  color: blue
+
 inputs:
   project:
     description: Project folder location
