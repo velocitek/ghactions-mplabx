@@ -1,0 +1,16 @@
+name: "Build with MPLabX and XC16"
+inputs:
+  project:
+    description: Project folder location
+    required: true
+  configuration:
+    description: Configuration to build
+    required: true
+    default: "default"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.project }}
+    - ${{ inputs.configuration }}
